@@ -8,6 +8,8 @@
 # Credits:This code is based pn the example we were given on github
 import math
 
+#the purpose of this lab is to use if, elif, and else statements to solve formulas with different variables
+
 height = 0
 par = 0
 points_per_meter = 0
