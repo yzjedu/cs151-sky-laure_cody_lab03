@@ -5,17 +5,18 @@
 # Problem Statement: What type of speed does a jumper need to achieve on the ramp to make good distance on their jump
 # Data In: hill type, jumper speed
 # Data Out: points, distance traveled
-# Credits:This code is based pn the example we were given on github
+# Credits:This code is based on the example we were given on github
 import math
 
 #the purpose of this lab is to use if, elif, and else statements to solve formulas with different variables
 
+#Create the variables and set each current value to zero
 height = 0
 par = 0
 points_per_meter = 0
 
 #Ask user to input the hill type
-hill_type = input('Enter the hill type normal or large: ')
+hill_type = input('Is the hill type normal or large?')
 if hill_type == 'normal':
     height = 46
     par = 90
@@ -28,16 +29,16 @@ else:
     print('Invalid hill type')
 
 #Ask user to input the jumper's speed at the end of the ramp
-jumper_speed = float(input('Enter the jumper speed in m/s: '))
+jumper_speed = float(input('What is the jumper''s speed at the end of the ramp in meters per second?'))
 
 #Calculate the time in the air
-time_in_air = float( math.sqrt((2 * height) / 9.8))
+time_in_air = float(math.sqrt((2 * height) / 9.8))
 
 #Calculate the distance traveled
-distance = float( jumper_speed * time_in_air )
+distance = float(jumper_speed * time_in_air)
 
 #Calculate the total points earned
-total_points = float( 60 + (distance - par) * points_per_meter)
+total_points = float(60 + (distance - par) * points_per_meter)
 
 #output response to user
 if total_points >= 61:
